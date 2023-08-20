@@ -17,6 +17,7 @@ public class ReprodutorMusical {
     }
 
     public void removerMusica(int indiceParaRemover) {
+        System.out.println("_______________________________Removendo música da playlist_______________________________\n");
         if (indiceParaRemover >= 0 && indiceParaRemover < listagemDeMusicas.size()) {
             Musica removeMusic = listagemDeMusicas.get(indiceParaRemover);
             listagemDeMusicas.remove(indiceParaRemover);
@@ -36,6 +37,7 @@ public class ReprodutorMusical {
     }
 
     public void musicaAnterior(int indice) {
+        System.out.println("_________________________________Reproduzir música anterior_______________________________\n");
         if (indice == 0) {
             int ultimoIndice = listagemDeMusicas.size() - 1;
             musicaEscolhida = ultimoIndice;
@@ -52,6 +54,7 @@ public class ReprodutorMusical {
     }
 
     public void musicaProxima(int indice) {
+        System.out.println("_________________________________Reproduzir próxima música________________________________\n");
         if (indice < listagemDeMusicas.size() && indice >= listagemDeMusicas.size() - 1) {
             musicaAtual = listagemDeMusicas.get(0);
             musicaEscolhida = 0;
@@ -67,6 +70,7 @@ public class ReprodutorMusical {
     }
 
     public void getMusicaAtual() {
+        System.out.println("_________________________________Listando a música atual__________________________________\n");
         if (musicaAtual != null) {
             System.out.println("Música atual: " + musicaAtual.getTitulo() + " - " + musicaAtual.getArtista() + "\n");
         } else {
@@ -75,6 +79,7 @@ public class ReprodutorMusical {
     }
 
     public List<String> getListaDeMusicas() {
+        System.out.println("_____________________________Adicionando música na playlist_______________________________\n");
         List<String> listamusic = new ArrayList<>();
         for(Musica musica: listagemDeMusicas) {
             String formato = "\nTitulo: " + musica.getTitulo() + "\nArtista: " + musica.getArtista() + "\nDuração: " + musica.getDuracao() +"\n";
@@ -85,6 +90,7 @@ public class ReprodutorMusical {
     }
 
     public void getReproduzir(){
+        System.out.println("_____________________________________Reproduzir música____________________________________\n");
         if (musicaAtual != null) {
             System.out.println("Reproduzindo: " + "\nTítulo: " + musicaAtual.getTitulo() + "\nArtista: " + musicaAtual.getArtista() + "\nDuração: " + musicaAtual.getDuracao());
         } else {
@@ -93,10 +99,12 @@ public class ReprodutorMusical {
     }
 
     public void getPausando(){
+        System.out.println("_______________________________________Pausando musica____________________________________\n");
         System.out.println("Pausando: " + musicaAtual.getTitulo());
     }
 
     public int getMusicaEscolhida() {
+        System.out.println("__________________________________Selecionando música_____________________________________\n");
         return musicaEscolhida;
     }
 

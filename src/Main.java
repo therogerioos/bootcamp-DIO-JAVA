@@ -1,6 +1,8 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 
+import pastaChamada.AparelhoTelefonico;
+import pastaInternet.NavegadorInternet;
 import pastaMusica.ReprodutorMusical;
 
 public class Main {
@@ -15,47 +17,40 @@ public class Main {
 
         reprodutor.setMusicaEscolhida(2);
 
-        System.out.println("_____________________________Adicionando música na playlist_______________________________\n");
-
         System.out.println(reprodutor.getListaDeMusicas());
-
-        System.out.println("__________________________________Selecionando música_____________________________________\n");
-
         reprodutor.musicaTocando(reprodutor.getMusicaEscolhida());
-
         System.out.println("Selecionando música.....");
-
-        System.out.println("_________________________________Listando a música atual__________________________________\n");
-
         reprodutor.getMusicaAtual();
-
-        System.out.println("_____________________________________Reproduzir música____________________________________\n");
-
         reprodutor.getReproduzir();
-
-        System.out.println("_________________________________Reproduzir música anterior_______________________________\n");
-
         reprodutor.musicaAnterior(reprodutor.getMusicaEscolhida());
-
         reprodutor.getMusicaAtual();
-
-        System.out.println("_________________________________Reproduzir próxima música________________________________\n");
-
         reprodutor.musicaProxima(reprodutor.getMusicaEscolhida());
-
         reprodutor.getMusicaAtual();
-
-        System.out.println("_______________________________________Pausando musica____________________________________\n");
-
         reprodutor.getPausando();
-
-        System.out.println("_______________________________Removendo música da playlist_______________________________\n");
-
         reprodutor.removerMusica(3);
 
-        System.out.println("__________________________________Musicas atuais salvas___________________________________\n");
-
         System.out.println(reprodutor.getListaDeMusicas());
+
+        AparelhoTelefonico telefone = new AparelhoTelefonico();
+
+        telefone.atenderChamada("31925475245","11985246954", "00:11:15" );
+        telefone.fazerChamada("11985246954","21954625896", "00:30:51" );
+        telefone.fazerChamada("11985246954","31925475245", "00:10:01" );
+        telefone.atenderChamada("21954625896","11985246954", "00:03:25" );
+
+        System.out.println(telefone.listarChamadasRealizadas());
+
+        System.out.println(telefone.listarChamadasRecebidas());
+
+        NavegadorInternet navega = new NavegadorInternet();
+
+        navega.abrirPagina("www.therogerioos.com.br/portfolio","\nOlá, este espaço é destinado a mostrar todas as minhas habilidades\n");
+        navega.abrirPagina("www.therogerioos.com.br/tutoriais","\nEste espaço é destinado para ajudar com dicas de programação\n");
+        navega.voltar();
+        navega.avancar();
+        navega.abrirPagina("www.therogerioos.com.br/curriculo", "\nVersão WEB do meu curriculo\n");
+        navega.abrirPagina("www.therogerioos.com.br/sobremim", "\nSaiba sobre minha carreira e meus projetos\n");
+
 
     }
 }
