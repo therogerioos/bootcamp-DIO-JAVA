@@ -20,4 +20,4 @@ Caso encontrem alguma melhoria a ser feita, deixem uma **Issues** para que possa
 
 E por fim, deixo o link do meu site, onde hospedo, tutoriais, portfolio, meu curriculo e poderá conhecer mais sobre mim.
 
-[Site da THEROGERIOOS](therogerioos.com.br)
+[Site da THEROGERIOOS](https://therogerioos.com.br/)
